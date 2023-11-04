@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trocchi', serif;
+}
+
+main {
+    padding: 5% 10%;
+    display: flex;
+    column-gap: 14%;
+    align-items: center;
+    justify-content: center;
+    @media(max-width:768px) {
+        flex-direction: column;
+        row-gap: 40px;
+        padding: 7%;
+    }
+}
+
+
+.container-left__message {
+    font-size: 2.2rem;
+    color: #3395bf;
+    @media(max-width:768px) {
+        font-size: 1.8rem;
+    }
+}
+
+.container-left__subtitulo {
+    font-family: 'Arimo', sans-serif;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #545454;
+    @media(max-width:768px) {
+        font-size: 1.4rem;
+    }
+}
+
+.container-left__button {
+    display: flex;
+    justify-content: center;
+    @media(max-width:768px) {
+        display: none;
+    }
+}
+
+.container__button__mobile {
+    @media(min-width:769px) {
+        display: none;
+    }
+}
+
+.button__button {
+    font-family: 'Arimo', sans-serif;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1.3rem;
+    background-color: #3395bf;
+    color: #fff;
+    border: none;
+    @media(max-width:768px) {
+        padding: 12px 8px;
+        font-size: 0.8rem;
+        margin-top: 0;
+    }
+}
+
+.button__button--hover:hover {
+    cursor: pointer;
+    background-color: #3395bf;
+    opacity: 0.8;
+
+}
+
+.container-right {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.container-right__img {
+    border-radius: 48px;
+    width: 100%;
+}
