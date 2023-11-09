@@ -9,6 +9,6 @@ Aixa Hernández: Main. |
 Luis Pernia: Sections de Ayuda. | 
 Yuliana Carrero: Section Guia Migratoria. | 
 Jhan Carlos Acuña: Form. | 
-Anthony Méndez: Ldr, diseño, QA, implementación de Firebase.
+Anthony Méndez: Cap, diseño, QA, iniciar el Back.
 
-HTML | CSS | JS | React | Firebase.
+# HTML | CSS | JS | React | Firebase.
