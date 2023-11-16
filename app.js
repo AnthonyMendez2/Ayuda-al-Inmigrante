@@ -14,5 +14,5 @@ function numInput(event){
         return true;
     }else{
         return false;
-    }
+    } 
 }
