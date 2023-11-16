@@ -146,11 +146,11 @@
                 <h2 class="seccion-formulario-titulo">¡Contactanos!</h2>
                 <form class="información-formulario">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre y apellido" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre y apellido" onkeydown="return textoInput(event);" maxlength="50" minlength="2" required>
                     <label for="correo">Correo Electrónico:</label>
-                    <input type="email" id="correo" name="correo" placeholder="Ingresa un correo electrónico">
+                    <input type="email" id="correo" name="correo" placeholder="Ingresa un correo electrónico" maxlength="50" inputmode="email" required>
                     <label for="telefono">Teléfono:</label>
-                    <input type="number" id="telefono" name="telefono" placeholder="Ingresa un numero de teléfono" maxlength="20">
+                    <input type="text" id="telefono" name="telefono" placeholder="Ingresa un número de teléfono" maxlength="15" minlength="3" onkeydown="return numInput(event);">
                     <label for="mensaje">Cuentanos un poco de ti:</label>
                     <textarea id="mensaje" name="mensaje" rows="4" maxlength="300"></textarea>
                     <button class="btn-formulario" type="submit">Enviar</button>
@@ -161,8 +161,10 @@
 
 
 </div>
-    <footer id="pie"><i>©Derechos reservados®</i></footer>
+    <footer id="pie"><small>©Derechos reservados®</small></footer>
 
+
+   
     <script src="app.js"></script>
 </body>
 </html>
