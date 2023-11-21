@@ -85,6 +85,9 @@ main {
 
 .container-right__img {
     border-radius: 48px;
-    width: 100%;
+    object-fit: cover;
+    @media(max-width:768px) {
+        width: 100%;
+    }
 }
 
