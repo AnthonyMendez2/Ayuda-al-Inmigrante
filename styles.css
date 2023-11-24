@@ -13,7 +13,178 @@
     scroll-padding-top: 155px;
 }
 
+
+
+/* Maria */
+.nav{
+    margin-top: -100px;
+    background-color: #1A202C;
+    color: #fff;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.nav__container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.nav__links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+
+.nav__item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.nav__item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.nav__link{
+    font-size: 0.7em;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.nav__link:hover{
+    background-color: #5e7094;
+}
+
+
+.nav__arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.nav__desplegable{
+    list-style: none;
+    transition:clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #000;
+}
+
+.nav__link--inside{
+    padding: 30px 100px 30px 20px;
+}
+
+.nav__link--inside:hover{
+    background-color: #798499;
+}
+
+.nav__icono{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img{
+    display: block;
+    width: 36px;
+}
+
+@media (max-width:800px){
+    .nav__icono{
+        display: flex;
+    }
+
+    .nav__item{
+        --clip:0;
+        overflow:hidden ;
+    }
+
+    .nav__item--active{
+        --transform: rotate(0);
+        --background: #5e7094;
+    }
+
+    .nav__item--show{
+        background-color: var(--background);
+    }
+
+
+    .nav__links{
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 70px;
+        bottom: 0;
+        right: 0;
+        background-color: #000;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translateX(100%);
+    }
+
+    .nav__links--show{
+        transform: unset;
+        width: 100%;
+    }
+
+    .nav__link{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .nav__arrow{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .nav__desplegable{
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .nav__link--inside{
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #798499;
+        justify-content: center;
+    }
+}
+
+
+
+/* Aixa */
+
 main {
+    margin-top: 100px;
     padding: 5% 10%;
     display: flex;
     column-gap: 14%;
@@ -27,7 +198,7 @@ main {
 }
 
 
-.container-left__message {
+.container1-left__message {
     font-size: 2.2rem;
     color: #3395bf;
     @media(max-width:768px) {
@@ -35,7 +206,7 @@ main {
     }
 }
 
-.container-left__subtitulo {
+.container1-left__subtitulo {
     font-family: 'Arimo', sans-serif;
     margin-top: 20px;
     font-size: 1.8rem;
@@ -45,13 +216,15 @@ main {
     }
 }
 
-.container-left__button {
+.container1-left__button {
+    display: flex;
+    justify-content: center;
     @media(max-width:768px) {
         display: none;
     }
 }
 
-.container__button__mobile {
+.container1__button__mobile {
     @media(min-width:769px) {
         display: none;
     }
@@ -65,7 +238,6 @@ main {
     background-color: #3395bf;
     color: #fff;
     border: none;
-    display: flex;
     @media(max-width:768px) {
         padding: 12px 8px;
         font-size: 0.8rem;
@@ -80,17 +252,22 @@ main {
 
 }
 
-
-
-
-.container-right__img {
-    margin-top: 60px;
-    border-radius: 48px;
-    width: 100%;
+.container1-right {
+    display: flex;
+    justify-content: flex-start;
 }
 
 
-/*Acá empieza Yuli, Guia*/
+.container1-right__img {
+    border-radius: 48px;
+    object-fit: cover;
+    @media(max-width:768px) {
+        width: 100%;
+    }
+}
+
+
+/* Yuliana */
 
 .guia{
     margin-top: 100px;
@@ -102,18 +279,9 @@ body{
     background-color:#fbfbfb;
     padding: 0%;
     font-size:1.2rem;
-    size: 1.5rem;
-    margin-top: 150px;
-    
-    
+    size: 1.5rem;    
  }
-h1{
- font-family: trocchi;
-    color:#3395bf;
-    padding-top: 8%;
-    text-align: center;
-    font-size: 2.5rem;
-}
+
 
 h2{
     color:#3395bf;
@@ -128,52 +296,51 @@ h2{
 }
  p{
     color:#545454;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-family: arimo;
  }
  .button{
+    margin:50px;
     color:#062d46;
     background-color: #3395bf;
-    /*display: inline-block;*/
-    font-size: 1.3rem; 
+    font-size: 1rem; 
     font-family: arimo;
-    height: 100%;
     justify-content: center;
     padding: 0.60em 0.60em;
     text-decoration: none;
     align-items: center;
-    color: #fff;
+    border-radius: 150px;
  }
  .button:hover {
     cursor: pointer;
-    background-color: #3395bf;
+    background-color: #41c1f7;
     opacity: 0.8;
+    color: #120e0e;
 }
 
 
  .buttonRad {
-    margin-top: 5px;
+    margin:60px;
     color: #3395bf;
     background-color: #e6e5e5;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: arimo;
     height: 100%;
     justify-content:center;
-    padding:0.60em 0.60em;
+    padding:0.60em 0.60em;  
     text-decoration:none;
-    align-items: center;
-    margin: 0, 10px;
+    border-radius: 150px;
  }
 
  .buttonRad:hover {
     cursor: pointer;
-    background-color: #a3ccde;
+    background-color: #5db5db;
     opacity: 0.8;
-    color: #949494;
+    color: #fff;
 
 }
 
-.container_guia{
+.container1_guia{
     @media(max-width:768px) {
         display: flex;
         flex-direction: column;         
@@ -186,71 +353,10 @@ h2{
     }
 }
 
-  /* header/footer */
-
-footer{
-    width: 100%;
-}
-  #pie {
-    text-align:center;
-    font-size: 1.3rem;
-    color:#ffffff;
-    background-color:#3395bf;
-    margin-top: 40px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    
-   
-}
-
-.menuItem a { 
-    display: flex;
-    font-size: 1rem;
-    color:#545454;
-    text-decoration: none; 
-   
-}
-.menuItem { 
-    display: flex;
-    list-style: none;
-    padding: 0;
-   
-  
-}
-
-.menuItem a:hover{
-   color: #44acd8;
-}
-
-.heady {
-   
-    display: flex;
-    align-items: center;
-    background:#fbfbfb;
-    position: fixed;
-    z-index: 10; 
-    box-sizing: border-box;
-    box-shadow: 0 2px 3px; 
-    /* color: #60afdf; */
-    left: 0;
-    top:0;
-    width: 100%;
-    justify-content: space-between;   
-}
-
-#H1{
-    margin-left: 10px;
-    padding-bottom: 20px;
-}
+  /* header */
 
 
- .menuItem a{
-    padding: 0 5px;
-    line-height: 50px;
-    margin-right: 10px;
-    margin: 0 20px 0 20px;
-}
+
 .contenido{
     max-width: 900px;
     min-height: 35vh;
@@ -272,7 +378,7 @@ footer{
 }
 
 
-.container_guia{
+.container1_guia{
 
     display:flex;
     justify-content: center;
@@ -348,7 +454,7 @@ footer{
 }
 
 /*formulario*/
-.container {
+.container1 {
     display: flex;
     align-items: center;
     width: 100%;
@@ -439,4 +545,10 @@ input, textarea {
 
 textarea{resize: none;}
 
-/*Acá Maria, nav y footer*/ 
+
+/*Acá footer*/
+
+#footer{
+    background: #eee;
+    padding: 50px 100px;
+}

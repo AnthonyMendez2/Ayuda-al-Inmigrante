@@ -5,47 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayuda al Inmigrante</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
    
-    <!--Acá Maria/Yuli, Header/Nav-->
-    <header>
+    <!--Acá Maria Header/Nav-->
+    
 
-        <div class="heady">
-            <div id="H1"><h1>Ayuda al Inmigrante</h1></div>
-            <nav class="menuItem">
-                <a href="#" id="aMenu">HOME</a>
-                <a href="#guiaMigratoria" id="aMenuI">INFORMACIÓN Y AYUDA</a>
-                <a href="#contacto" id="aMenu">CONTACTO</a>
-            </nav>
+    <nav class="nav">
+        <section class="nav__container1">
+            <h1 class="nav__logo">Ayuda al Migrante</h1>
+            <ul class="nav__links">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">HOME</a>
+                </li>
+    
+                <li class="nav__item nav__item--show">
+                    <a href="#guiaMigratoria" class="nav__link">GUÍA MIGRATORIA<img src="./iconos/arrow.svg" class="nav__arrow"></a>
+                    <ul class="nav__desplegable">
+                        <li class="nav__inside">
+                            <a href="#Colombia" class="nav__link nav__link--inside">Colombia</a>
+                        </li>
+                        <li class="nav__inside">
+                            <a href="#Chile" class="nav__link nav__link--inside">Chile</a>
+                        </li>
+                        <li class="nav__inside">
+                            <a href="#Argentina" class="nav__link nav__link--inside">Argentina</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <!-- <li class="nav__item nav__item--show">
+                    <a href="#" class="nav__link">Educación <img src="./iconos/arrow.svg" class="nav__arrow"></a>
+                    <ul class="nav__desplegable">
+                        <li class="nav__inside">
+                            <a href="#" class="nav__link nav__link--inside">Universidades</a>
+                        </li>
+                        <li class="nav__inside">
+                            <a href="#" class="nav__link nav__link--inside">Estudios Online</a>
+                        </li>
+                        <li class="nav__inside">
+                            <a href="#" class="nav__link nav__link--inside">Mas Info</a>
+                        </li>
+                    </ul>
+                </li> -->
 
-            <!-- <div class="menuTitulo">
-                <a href="#titulo" class='active'>Guia al Inmigrante</a>
+                <li class="nav__item nav__item--show">
+                    <a href="#masInfo" class="nav__link">MÁS INFO<img src="./iconos/arrow.svg" class="nav__arrow"></a>
+                    <!-- <ul class="nav__desplegable">
+                        <li class="nav__inside">
+                            <a href="#" class="nav__link nav__link--inside">Parques </a>
+                        </li>
+                        <li class="nav__inside">
+                            <a href="#" class="nav__link nav__link--inside">Museos</a>
+                        </li>
+                        <li class="nav__inside">
+                            <a href="#" class="nav__link nav__link--inside">mas info</a>
+                        </li>
+                    </ul> -->
+                </li>
+    
+                <li class="nav__item">
+                    <a href="#contacto" class="nav__link">CONTACTO</a>
+                </li>
+    
+            </ul>
 
+            <div class="nav__icono">
+                <img src="./iconos/menu.svg" class="nav__img">
             </div>
-            <div class="menuItem">
-                <a href="#home">HOME</a>
-                <a href="#Informacion y ayudas">INFORMACION Y AYUDA</a>
-                <a href="#Contacto">CONTACTO</a>
-            </div> -->
-        </div> 
+        </section>
+    </nav>
 
-    </header>
+
 
      <!--Acá Aixa, main-->
-     <main>
-        <section class="container-left">
-                <h2 class="container-left__message">¡Recuerda que puedes ser feliz en el lugar que escojas para vivir!</h2>
-                <p class="container-left__subtitulo">Los desafíos pueden ser difíciles, pero cada paso que das, te acerca a un futuro mejor. </p>
-            <div class="container-left__button">
-                <button class="button__button button__button--hover"><a href="tel:+541169602103" id="btn-formulario">¿Necesitas hablar? Aquí estamos para tí, ¡llama ahora!</a></button>
+     <main class="main1">
+        <section class="container1-left">
+            <h2 class="container1-left__message">¡Recuerda que puedes ser feliz en el lugar que escojas para vivir!</h2>
+            <p class="container1-left__subtitulo">Los desafíos pueden ser difíciles, pero cada paso que das, te acerca a un futuro mejor. </p>
+            <div class="container1-left__button">
+                <button id="callBtn" class="button__button button__button--hover">¿Necesitas hablar? ¡Contáctanos ya! 
+                
+                                
             </div>
         </section>
-        <section class="container-right">
-            <img class="container-right__img" src="multimedia/caminantes.png" alt="" srcset="">
+        <section class="container1-right">
+            <img class="container1-right__img" src="./multimedia/caminantes.png" alt="caminantes">
         </section>
-        <div class="container__button__mobile">
-            <button class="button__button button__button--hover">¿Necesitas hablar? Aquí estamos para tí, ¡llama ahora! </button>
+        <div id= callBtnMobile class="container1__button__mobile">
+            <button class="button__button button__button--hover">¿Necesitas hablar? ¡Contáctanos ya!</button>
         </div>
     </main>
 
@@ -72,7 +122,7 @@
     <br>
 
 
-    <div class="container_guia">
+    <div class="container1_guia">
        
         <div id="Colombia">
             <img class="imagen" src="multimedia/colombia-pais-bandera-frontera-sobre-fondo-blanco_764664-18208.jpg" alt="mapa colombia">
@@ -117,7 +167,7 @@
         <div class="banner-formulario">
             <div class="banner-contenido-formulario">
                 <h3 class="banner-texto-formulario">"Unámonos para proteger a los inmigrantes, construyendo puentes en lugar de barreras, y asegurando un futuro más humano y sostenible para todos."</h3>
-                <button><a href="https://www.iom.int/es" target="_blank" class="btn-formulario" >Más Información</a></button>
+                <button><a href="https://www.iom.int/es" target="_blank" class="btn-formulario" id="masInfo">Más Información</a></button>
             </div>
         </div>
         <div class="seccion-descritivo-formulario">
@@ -141,7 +191,7 @@
             </div>
         </div>
 
-        <div class="container" id="contacto">
+        <div class="container1" id="contacto">
             <div class="formulario">
                 <h2 class="seccion-formulario-titulo">¡Contactanos!</h2>
                 <form class="información-formulario">
@@ -161,7 +211,57 @@
 
 
 </div>
-    <footer id="pie"><small>©Derechos reservados®</small></footer>
+
+
+    <footer class="bg-light text-dark pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">Nosotros</h5>
+                    <hr class="mb-4">
+                    <p>Desarrollo de página web para brindar una ayuda psicológica, financiera y también como guía migratoria en LATAM. Dejanos tus datos en el formulario para más información y ayuda.</p><br>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">Integrantes</h5>
+                    <hr class="mb-4">
+                    <p class="text-dark">Aixa Hernández <br> Yuliana Carrero <br> María Pantoja <br> Jhan Carlos Acuña <br> Anthony Méndez
+                    </p><br>              
+                </div>
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">Cantacto</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <li class="fas fa-phone me-3"></li>+5491169602103 (Número de contención Psico)
+                    </p>
+                    <p>
+                        <li class="fas fa-home me-3"></li>Argentina
+                    </p>
+                    <p>
+                        <li class="fas fa-envelope me-3"></li>ayudamigrante@test.com
+                    </p>          
+                </div>
+
+                <div class="text-center mb-2">
+                    <p>Copyright<br>Todos los derechos reservados<br>
+                        <strong class="text-primary">Team Blue 2</strong>
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item"><a href="" class="text-dark" target="_blank"><i class="fab fa-google"></i></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/AnthonyMendez2/Ayuda-al-Inmigrante" class="text-dark" target="_blank"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </div>
+    </footer>
 
 
    
