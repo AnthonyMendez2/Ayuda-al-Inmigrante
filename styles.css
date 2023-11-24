@@ -545,10 +545,3 @@ input, textarea {
 
 textarea{resize: none;}
 
-
-/*Acá footer*/
-
-#footer{
-    background: #eee;
-    padding: 50px 100px;
-}
