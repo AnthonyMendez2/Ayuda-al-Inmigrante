@@ -13,4 +13,4 @@ Anthony Méndez: Cap, diseño, QA, iniciar el Back.
 
 # HTML | CSS | JS | React | Firebase.
 
-https://anthonymendez2.github.io/Ayuda-al-Inmigrante/
+https://ayudamigrante-teamblue2.netlify.app/
